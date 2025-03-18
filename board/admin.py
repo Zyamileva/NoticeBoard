@@ -1,14 +1,13 @@
 from django.contrib import admin
-from django.contrib.auth.models import User
+from board.models import Category, Ad, Comment, UserProf
 
-from board.models import Category, Ad, Comment
 
 # admin.site.register(Category)
 # admin.site.register(Ad)
 # admin.site.register(Comment)
 
 
-@admin.register(User)
+@admin.register(UserProf)
 class UserAdmin(admin.ModelAdmin):
     """Admin interface for managing User objects.
 

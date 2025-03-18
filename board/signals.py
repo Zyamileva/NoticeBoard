@@ -8,7 +8,6 @@ from board.models import Ad
 logger = logging.getLogger(__name__)
 @receiver(post_save, sender=Ad)
 def send_ad_notification(sender, instance, created, **kwargs):
-    print(instance.user.email)
     if created:
         send_mail(
             "Нове оголошення",
